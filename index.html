@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="brandName">Dictionary</h1>
+        <nav class="nav-list">
+            <a href="#">Grammar</a>
+            <a href="#">Translation</a>
+            <a href="#">Tenses</a>
+            <a href="#">Games</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <div class="text-content">
+                <h2 class="title-content">Learn something <b>NEW</b></h2>
+                <p>This web helps you learn new
+                    <br>word and improve your vocabulary
+                </p>
+            </div>
+            <audio id="sound"></audio>
+            <div class="card">
+                <div class="search-box">
+                    <input type="text" placeholder="Type the word here..."
+                    id="input-word">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Java Script -->
+    <script src="script.js"></script>
+</body>
+</html>
