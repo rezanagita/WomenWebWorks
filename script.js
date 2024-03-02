@@ -9,7 +9,19 @@ btn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        result.innerHTML = `
+    //    data.forEach(element => {
+    //         console.log(element)
+    //     showResult(element)
+    //    });
+    
+
+    })
+    .catch(() => {
+        result.innerHTML = `<h3>Couldn't Find The Word</h3>`;
+    });
+});
+function showResult(data) {
+    result.innerHTML = `
         <div class="word">
             <h3>${inputWord}</h3>
             <button onclick="playSound()">
@@ -28,12 +40,7 @@ btn.addEventListener("click", () => {
         </p>`; 
         sound.setAttribute("src", data[0].phonetics[1].audio);
 
-    })
-    .catch(() => {
-        result.innerHTML = `<h3>Couldn't Find The Word</h3>`;
-    });
-});
-
+}
 function playSound() {
     sound.play();
 }
